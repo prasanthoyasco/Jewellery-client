@@ -21,7 +21,7 @@ function Footer() {
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/gold-rates');
+        const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/gold-rates`);
         setRates(res.data); 
         console.log(res.data);
         
