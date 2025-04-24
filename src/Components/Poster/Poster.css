@@ -25,3 +25,10 @@
     line-height: 1.5;
   }
   
+  @media (max-width: 480px) {
+    .poster h3{
+    top: 50%;
+    left: 36%;
+    font-size: 23px;
+}
+}

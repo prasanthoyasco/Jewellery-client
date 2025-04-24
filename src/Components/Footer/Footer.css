@@ -38,3 +38,10 @@
 .policy p:hover{
     color: #e9dce9;
 }
+
+@media (max-width: 480px) {
+    .footer{
+        flex-direction: column;
+        gap: 30px;
+    }
+}

@@ -3,3 +3,9 @@
     justify-content: space-evenly;
     margin: 30px;
 }
+
+@media (max-width: 480px) {
+    .division-heading{
+        display: none;
+    }
+}

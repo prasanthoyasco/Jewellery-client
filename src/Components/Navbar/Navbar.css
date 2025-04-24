@@ -1,16 +1,144 @@
-.Navbar-icons-headings a{
-    font-size: 30px;
-    color: black;
+
+.navbar-logo-desktop{
+text-align: center;
 }
-.Navbar-icons-headings{
+.navbar-left a{
+    color: #333;
+}
+.navbar-right-icons a{
+ color: #333;
+ margin-left: 10px;
+}
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+.navbar-logo-mobile {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.logo-text-mobile {
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.navbar-desktop {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-desktop .Navbar-icons-headings a {
+  font-size: 1rem;
+}
+
+.navbar-desktop .Navbar-icons-headings a i {
+  font-size: 1.5rem;
+}
+
+.navbar-desktop .Navbar-right-icons {
+  gap: 30px;
+}
+
+.navbar-desktop .Navbar-right-icons a {
+  font-size: 1.5rem;
+}
+
+.navbar-desktop .Logo img {
+  height: 70px;
+  margin-top: 10px;
+}
+
+.navbar-desktop .Logo p {
+  font-size: 1rem;
+}
+
+.Navbar-icons-headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.Navbar-icons-headings a {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.Navbar-icons-headings a i {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.Navbar-right-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.Navbar-right-icons a {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.Logo {
+  cursor: pointer;
+  text-align: center;
+}
+
+.Logo img {
+  height: 50px;
+  margin-top: 5px;
+}
+
+.Logo p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+  }
+
+  .Navbar-icons-headings {
+    display: none;
+  }
 }
-.Navbar-right-icons{
+
+@media (min-width: 769px) {
+  .navbar-mobile {
+    display: none;
+  }
+
+  .navbar-desktop {
     display: flex;
-    gap: 30px;
-}
-.Logo{
-cursor: pointer;
+  }
 }

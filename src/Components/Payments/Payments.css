@@ -10,9 +10,10 @@
     justify-content: space-between;
     column-gap: 3%;
     width: 100%;
-    height: 300px;
+    /* flex-wrap: wrap; */
     margin-top: 5%;
 }
+
 .payment-section{
     display: flex;
     font-size: x-small !important;
@@ -52,4 +53,17 @@
 .toptext p,
 .paytext p {
   font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    .payment-deliver{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .deliver-section,.payment-section,.packing-section{
+        width: 100%;
+    }
+    .payment-image, .del-btm-text{
+        margin-top: 20px;
+    }
 }

@@ -30,7 +30,7 @@ function Payments() {
             check and pack each product before shopping
           </p>
         </div>
-        <p>We send wholesale product only via transport companines</p>
+        <p className="del-btm-text">We send wholesale product only via transport companines</p>
       </div>
 
       <div className="packing-section">

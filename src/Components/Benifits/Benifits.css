@@ -34,3 +34,9 @@
     padding: 5%;
     background-color: rgb(246, 245, 250);
 }
+
+@media (max-width: 480px) {
+    .Benifits{
+        flex-direction: column;
+    }
+}

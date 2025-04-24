@@ -23,7 +23,7 @@ function BestSalers() {
     <div style={{ marginTop: "5%" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h1>Best Sellers</h1>
-        <span className="see-more-btn">See more</span>
+        <button className="btn see-more-btn">See more</button>
       </div>
 
       <div className="bestSalers-grid">
