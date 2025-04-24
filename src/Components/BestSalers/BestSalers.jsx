@@ -42,7 +42,7 @@ function BestSalers() {
               <h6 className="price">
                 Price: ₹{item.price.toLocaleString('en-IN')}
                 <div className="tooltip-container">
-                  <i className="bi bi-info-circle-fill info-icon"></i>
+                  <i className="bi bi-info-circle info-icon"></i>
                   <div className="tooltip-box">
                     <p><span style={{fontWeight:'400'}}> Weight: </span> {item.weight} gm</p>
                     <p><span style={{fontWeight:'400'}}>Gold Price:</span> ₹ {item.goldRatePerGram.toLocaleString('en-IN')} per/gm</p>
