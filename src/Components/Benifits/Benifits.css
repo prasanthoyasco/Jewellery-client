@@ -1,0 +1,36 @@
+.Benifits h1{
+ font-size: 2.4rem;
+ text-transform: capitalize;
+ margin-bottom: 16px;
+ color: rgb(191 153 104);
+}
+.Benifites-left{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.Benifits-experience{
+    width: 100%;
+    height: inherit;
+    padding: 18% 20px 20px 20px;
+    background-color:rgb(243, 218, 209);
+    border-radius: 20px;
+}
+
+.Benifits-quality{
+    width: 100%;
+    height: inherit;
+    padding: 5%;
+    background-color: rgb(246, 245, 250);
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+.Benifits-environmental{
+    width: 100%;
+    border-radius: 20px;
+    padding: 5%;
+    background-color: rgb(246, 245, 250);
+}

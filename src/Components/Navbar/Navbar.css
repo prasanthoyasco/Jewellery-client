@@ -1,0 +1,16 @@
+.Navbar-icons-headings a{
+    font-size: 30px;
+    color: black;
+}
+.Navbar-icons-headings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Navbar-right-icons{
+    display: flex;
+    gap: 30px;
+}
+.Logo{
+cursor: pointer;
+}
