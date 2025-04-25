@@ -1,6 +1,10 @@
-
 .navbar-logo-desktop{
-text-align: center;
+  cursor: pointer;
+}
+.navbar-logo-desktop p{
+margin-left: 20px;
+letter-spacing: 2px;
+font-weight: 500;
 }
 .navbar-left a{
     color: #333;
@@ -8,6 +12,10 @@ text-align: center;
 .navbar-right-icons a{
  color: #333;
  margin-left: 10px;
+}
+.navbar-right-icons a:hover{
+  color: #bf9968;
+  filter: drop-shadow(0px 2px 4px #ffe5c3);
 }
 .navbar-container {
   display: flex;

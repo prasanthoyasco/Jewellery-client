@@ -38,7 +38,6 @@
     border-radius: 5px;
     margin-bottom: 10px;
     justify-content: center;
-    padding: 30px;
     align-items: center; /* center image vertically */
     aspect-ratio: 1 / 1; /* force square shape */
     overflow: hidden; /* hide overflow if image is larger */
@@ -90,3 +89,25 @@
     font-size: 14px;
     margin-bottom: 10px;
   }
+.Best-seller-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  @media (max-width: 480px) {
+    .see-more-btn{
+      padding: 5px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .Best-seller-head{
+      align-items: center;
+    }
+    .Best-seller-head h1{
+      font-size: 24px;
+    }
+    .bestSalers-grid {
+      padding: 20px 0px;
+      gap: 30px;
+    }
+}

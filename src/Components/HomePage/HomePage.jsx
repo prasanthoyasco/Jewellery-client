@@ -12,7 +12,6 @@ function HomePage() {
   return (
     <div style={{margin:"0px 30px"}}>
       <Navbar/>
-      <Divisions/>
       <Wallpaper/>
       <BestSalers/>
       <Benifits/>

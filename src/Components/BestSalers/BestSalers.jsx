@@ -21,7 +21,7 @@ function BestSalers() {
 
   return (
     <div style={{ marginTop: "5%" }}>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div className='Best-seller-head'>
         <h1>Best Sellers</h1>
         <button className="btn see-more-btn">See more</button>
       </div>

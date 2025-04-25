@@ -1,9 +1,11 @@
 .wallpaper-image {
-    /* height: 500px; */
+    height: 600px;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 20px;
 }
-/* .Hero-img{
-    height: 500px;
-} */
+@media (max-width: 480px) {
+    .wallpaper-image {
+        height: 200px;
+    }
+}

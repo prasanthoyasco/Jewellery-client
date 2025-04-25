@@ -22,9 +22,7 @@ function Footer() {
     const fetchGoldRates = async () => {
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/gold-rates`);
-        setRates(res.data); 
-        console.log(res.data);
-        
+        setRates(res.data);         
         setLoading(false);
       } catch (error) {
         console.error("Error fetching gold rates:", error);
