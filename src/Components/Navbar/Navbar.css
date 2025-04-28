@@ -2,9 +2,13 @@
   cursor: pointer;
 }
 .navbar-logo-desktop p{
-margin-left: 20px;
-letter-spacing: 2px;
-font-weight: 500;
+  margin-left: 25px;
+  margin-top: -10px;
+  letter-spacing: 5.4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #d5b65d;
+  text-transform: uppercase;
 }
 .navbar-left a{
     color: #333;
@@ -55,6 +59,8 @@ font-weight: 500;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  background-color: #f1f1f1;
+  border-radius: 0px 0px 30px 30px;
 }
 
 .navbar-desktop .Navbar-icons-headings a {

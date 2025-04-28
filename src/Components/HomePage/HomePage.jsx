@@ -10,8 +10,9 @@ import Benifits from '../Benifits/Benifits'
 import Footer from '../Footer/Footer'
 function HomePage() {
   return (
+    <>
+       <Navbar/>
     <div style={{margin:"0px 30px"}}>
-      <Navbar/>
       <Wallpaper/>
       <BestSalers/>
       <Benifits/>
@@ -19,6 +20,7 @@ function HomePage() {
       <Payments/>
       <Footer/>
     </div>
+    </>
   )
 }
 
