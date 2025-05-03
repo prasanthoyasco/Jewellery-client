@@ -1,12 +1,33 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: fadeInDown 0.3s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 .navbar-logo-desktop{
   cursor: pointer;
 }
 .navbar-logo-desktop p{
-  margin-left: 25px;
+  margin-left: 21px;
   margin-top: -10px;
-  letter-spacing: 5.4px;
-  font-size: 12px;
-  font-weight: 600;
+  letter-spacing: 4.8px;
+  font-size: 10px;
+  font-weight: 700;
   color: #d5b65d;
   text-transform: uppercase;
 }

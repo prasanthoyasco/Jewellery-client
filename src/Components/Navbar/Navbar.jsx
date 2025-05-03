@@ -18,7 +18,7 @@ function Navbar() {
       </div>
       <div className="navbar-desktop">
       <div className="navbar-logo-desktop">
-          <img src={Atelierlogo} alt="Atelier" height="70px" style={{ marginTop: '10px' }} />
+          <img src={Atelierlogo} alt="Atelier" height="60px" />
           <p className="">Jewellery</p>
         </div>
         {/* <div className="navbar-left">

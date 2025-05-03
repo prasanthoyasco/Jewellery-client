@@ -2,7 +2,7 @@ import React from 'react'
 import './Benifits.css'
 function Benifits() {
   return (
-    <div style={{display:"flex",justifyContent:"space-between",gap:"50px",marginTop:"5%"}} className='Benifits'>
+    <div style={{display:"flex",justifyContent:"space-between",gap:"50px",margin:"5% 0%"}} className='Benifits'>
       <div className='Benifits-experience'>
         <h1>25 years of experience and trust</h1>
         <p>Jewelry enhances personal style, symbolizes special moments, and can hold emotional or cultural significance while also serving as a form of investment or self-expression.</p>
