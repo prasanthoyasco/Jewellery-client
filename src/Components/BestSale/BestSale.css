@@ -3,10 +3,15 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 5%;
+  margin-bottom: 10%;
   position: relative;
+  
 }
-
+.best-sale-text{
+  text-align: center;
+  margin-top: 5%;
+  color: rgb(138, 63, 36);
+}
 .best-sale-images {
   display: flex;
   gap: 10px;
@@ -26,45 +31,47 @@
 }
 
 .index-0 {
-  transform: scale(0.8) rotateZ(-3deg) translateY(40px);
+  transform: scale(0.9) rotateZ(-3deg) translateY(40px);
   z-index: 1;
-  height: 375px;
+  height: 403px;
 }
 
 .index-1 {
   transform: scale(0.9) rotateZ(-2deg) translateY(20px);
-  z-index: 2;
+  z-index: 1;
   height: 400px;
 }
 
 .index-2 {
-  transform: scale(1.0) rotateZ(0deg) translateY(0);
-  z-index: 3;
-  height: 410px;
+  transform: scale(0.9) rotateZ(0deg) translateY(0);
+  z-index: 1;
+  height: 370px;
 }
 
 .index-3 {
   transform: scale(0.9) rotateZ(2deg) translateY(20px);
-  z-index: 2;
+  z-index: 1;
   height: 400px;
 }
 
 .index-4 {
-  transform: scale(0.8) rotateZ(3deg) translateY(40px);
+  transform: scale(0.9) rotateZ(3deg) translateY(40px);
   z-index: 1;
-  height: 375px;
+  height: 403px;
 }
 
 .slider-btn {
   position: absolute;
   top: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color:white;
+  color: black;
   border: none;
   padding: 10px;
   font-size: 24px;
   cursor: pointer;
   z-index: 4;
+  width: 70px;
+  border-radius: 30px;
 }
 
 .prev-btn {
@@ -78,3 +85,29 @@
 .slider-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+
+.best-sale-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.best-sale-images.slide {
+  animation: slideLeft 0.3s ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(30px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+

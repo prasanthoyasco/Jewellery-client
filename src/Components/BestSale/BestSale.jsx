@@ -26,7 +26,19 @@ const products = [
 
 const BestSale = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animate, setAnimate] = useState(false);
 
+const nextProduct = () => {
+  setAnimate(true);
+  setTimeout(() => setAnimate(false), 300); // Match CSS duration
+  setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+};
+
+const prevProduct = () => {
+  setAnimate(true);
+  setTimeout(() => setAnimate(false), 300);
+  setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
+};
   const getVisibleProducts = () => {
     const visibleProducts = [];
     const productCount = products.length;
@@ -40,36 +52,45 @@ const BestSale = () => {
     return visibleProducts;
   };
 
-  const nextProduct = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
-  };
+  // const nextProduct = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+  // };
 
-  const prevProduct = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
-  };
+  // const prevProduct = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
+  // };
 
   return (
+    <>
+    <div className='best-sale-text'>
+          <p>our</p>
+          <h1>The BestSaler</h1>
+          </div>
     <div className="best-sale-container">
       <button className="slider-btn prev-btn" onClick={prevProduct}>
         &lt;
       </button>
 
-      <div className="best-sale-images">
-        {getVisibleProducts().map((item, index) => (
-          <div key={`${item.id}-${index}`} className={`best-sale-img-div index-${index}`}>
-            <img 
-              src={item.image} 
-              className="best-sale-image" 
-              alt={item.name} 
-            />
-          </div>
-        ))}
-      </div>
+      <div className={`best-sale-images ${animate ? 'slide' : ''}`}>
+  {getVisibleProducts().map((item, index) => (
+    <div key={`${item.id}-${index}`} className={`best-sale-img-div index-${index}`}>
+      <img 
+        src={item.image} 
+        className="best-sale-image" 
+        alt={item.name} 
+      />
+    </div>
+  ))}
+</div>
 
       <button className="slider-btn next-btn" onClick={nextProduct}>
         &gt;
       </button>
     </div>
+    <div class="stars-bg"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+    </>
   );
 };
 
