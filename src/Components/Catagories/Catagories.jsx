@@ -27,6 +27,11 @@ const Catagories = () => {
   };
 
   return (
+    <>
+    <div className='catagories-heading'>
+      <p>Shop by</p>
+      <h1>Category</h1>
+    </div>
     <div className="categories-carousel-container">
       <Slider {...settings}>
         {slides.map((slideColumns, slideIndex) => (
@@ -47,6 +52,8 @@ const Catagories = () => {
         ))}
       </Slider>
     </div>
+
+    </>
   );
 };
 

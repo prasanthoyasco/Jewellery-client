@@ -6,7 +6,11 @@
   width: 100%;
   margin: 0 auto;
 }
-
+.catagories-heading{
+  text-align: center;
+  color: rgb(161, 81, 51);
+  margin-top: 5%;
+}
 .category-col {
   display: flex;
   flex-direction: column;
@@ -58,7 +62,12 @@
  }  /* Reduced from 250px */
 .h-33 { 
   width: 300px;
-  height: 165px !important;
+  height: 156px !important;
+  margin: 0 auto; 
+}   /* Reduced from 160px */
+.h-34 { 
+  width: 300px;
+  height: 167px !important;
   margin: 0 auto; 
 }   /* Reduced from 160px */
 .h-66 {
@@ -68,7 +77,7 @@
    }    /* Reduced from 340px */
 .h-30 {
   width: 200px;
-  height: 250px !important;
+  height: 255px !important;
   margin: 0 auto;
    }    /* Reduced from 340px */
 

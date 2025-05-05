@@ -29,7 +29,7 @@ export const categoryColumns = [
     type: 'medium',
     items: [
       { title: 'Pendants', image: image5, height: 'h-66' },
-      { title: 'Mangalsutra', image: image7, height: 'h-33' }
+      { title: 'Mangalsutra', image: image7, height: 'h-34' }
     ]
   },
   {
