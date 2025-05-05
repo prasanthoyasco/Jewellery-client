@@ -7,66 +7,156 @@ import image6 from './catagories-image6.jpg';
 import image7 from './catagories-image7.jpg';
 import image8 from './catagories-image8.jpg';
 import image9 from './catagories-image9.jpg';
+import image10 from './catagories-image6.jpg';
+import image11 from './catagories-image7.jpg';
+import image12 from './catagories-image8.jpg';
 
-
-export const categoryColumns = [
+export const categories = [
   {
-    type: 'big',
+    columnClass: "box-w-big",
     items: [
-      { title: 'Diamond', image: image1, height: 'h-50' },
-      { title: 'Earrings', image: image2, height: 'h-50' }
-    ]
+      {
+        link: "#",
+        image: image1,
+        label: "Diamond",
+        bg: "background-black",
+        heightClass: "h-50",
+      },
+      {
+        link: "#",
+        image: image2,
+        label: "Earrings",
+        bg: "background-pink",
+        heightClass: "h-50",
+      },
+    ],
   },
   {
-    type: 'medium',
+    columnClass: "box-w-medium",
     items: [
-      { title: 'Rings', image: image3, height: 'h-33' },
-      { title: 'Silver', image: image4, height: 'h-33' },
-      { title: 'Necklace', image: image6, height: 'h-33' }
-    ]
+      {
+        link: "#",
+        image: image3,
+        label: "Rings",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+      {
+        link: "#",
+        image: image4,
+        label: "Silver",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+      {
+        link: "#",
+        image: image6,
+        label: "Necklace",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+    ],
   },
   {
-    type: 'medium',
+    columnClass: "box-w-medium",
     items: [
-      { title: 'Pendants', image: image5, height: 'h-66' },
-      { title: 'Mangalsutra', image: image7, height: 'h-33' }
-    ]
+      {
+        link: "#",
+        image: image5,
+        label: "Pendants",
+        bg: "background-pink",
+        heightClass: "card-h-66",
+      },
+      {
+        link: "#",
+        image: image7,
+        label: "Mangalsutra",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+    ],
   },
   {
-    type: 'small',
+    columnClass: "box-w-small",
     items: [
-      { title: 'Bracelets', image: image8, height: 'h-30' },
-      { title: 'Coins', image: image9, height: 'h-30' }
-    ]
+      {
+        link: "#",
+        image: image8,
+        label: "Bracelets",
+        bg: "background-pink",
+        heightClass: "h-30",
+      },
+      {
+        link: "#",
+        image: image9,
+        label: "Coins",
+        bg: "background-pink",
+        heightClass: "h-30",
+      },
+    ],
   },
   {
-    type: 'big',
+    columnClass: "box-w-medium",
     items: [
-      { title: 'Diamond', image: image1, height: 'h-50' },
-      { title: 'Earrings', image: image2, height: 'h-50' }
-    ]
+      {
+        link: "#",
+        image: image10,
+        label: "Chains",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+      {
+        link: "#",
+        image: image11,
+        label: "Anklets",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+      {
+        link: "#",
+        image: image12,
+        label: "Bangles",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+    ],
   },
   {
-    type: 'medium',
+    columnClass: "box-w-medium",
     items: [
-      { title: 'Rings', image: image3, height: 'h-33' },
-      { title: 'Silver', image: image4, height: 'h-33' },
-      { title: 'Necklace', image: image6, height: 'h-33' }
-    ]
+      {
+        link: "#",
+        image: image5,
+        label: "Pendants",
+        bg: "background-pink",
+        heightClass: "card-h-66",
+      },
+      {
+        link: "#",
+        image: image7,
+        label: "Mangalsutra",
+        bg: "background-pink",
+        heightClass: "card-h-33",
+      },
+    ],
   },
   {
-    type: 'medium',
+    columnClass: "box-w-small",
     items: [
-      { title: 'Pendants', image: image5, height: 'h-66' },
-      { title: 'Mangalsutra', image: image7, height: 'h-33' }
-    ]
+      {
+        link: "#",
+        image: image8,
+        label: "Bracelets",
+        bg: "background-pink",
+        heightClass: "h-30",
+      },
+      {
+        link: "#",
+        image: image9,
+        label: "Coins",
+        bg: "background-pink",
+        heightClass: "h-30",
+      },
+    ],
   },
-  {
-    type: 'small',
-    items: [
-      { title: 'Bracelets', image: image8, height: 'h-30' },
-      { title: 'Coins', image: image9, height: 'h-30' }
-    ]
-  },
-  
 ];

@@ -5,8 +5,9 @@
 
 .Shop-Img {
     border-radius: 20px;
-    height: 600px;
+    height: 400px;
     width: 100%;
+    object-position: top;
     object-fit: cover;
 }
 
@@ -28,7 +29,6 @@
 
 .Shop-Img-words p {
     font-size: 16px;
-    font-weight: bold;
 }
 
 .Shop-Img-words button {

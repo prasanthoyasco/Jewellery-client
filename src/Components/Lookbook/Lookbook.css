@@ -134,16 +134,20 @@
 
   
   .price {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .price del {
-    color: #999;
-    margin-right: 5px;
+    color: #9f4747;
+    font-weight: 700;
+    font-size: 8px;
+    margin-right: 4px;
   }
   
   .price ins {
-    color: #d5b65d;
+    color: #688b30;
+    font-size: 16px;
+    font-weight: 700;
     text-decoration: none;
   }
  

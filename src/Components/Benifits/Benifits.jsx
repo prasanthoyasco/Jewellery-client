@@ -1,25 +1,55 @@
-import React from 'react'
-import './Benifits.css'
+import React, { useEffect, useRef } from 'react';
+import './Benifits.css';
+import img from "../../assets/ringspng.png";
+
 function Benifits() {
+  const ref = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    ref.current.forEach(el => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div style={{display:"flex",justifyContent:"space-between",gap:"50px",margin:"5% 0%"}} className='Benifits'>
+    <div className='Benifits' style={{ display: "flex", justifyContent: "space-between", gap: "50px", margin: "5% 0%" }}>
       <div className='Benifits-experience'>
-        <h1>25 years of experience and trust</h1>
-        <p>Jewelry enhances personal style, symbolizes special moments, and can hold emotional or cultural significance while also serving as a form of investment or self-expression.</p>
+        <img src={img} alt="Image" className='rotate' />
+        <h3 className='fade-slide-up' ref={el => ref.current.push(el)}>25 years of experience and trust</h3>
+        <p className='fade-slide-up' ref={el => ref.current.push(el)} style={{ transitionDelay: "0.2s" }}>
+          Jewelry enhances personal style, symbolizes special moments, and can hold emotional or cultural significance...
+        </p>
       </div>
 
-      <div style={{width:"100%"}} className='Benifites-left'>
+      <div className='Benifites-left' style={{ width: "100%" }}>
         <div className='Benifits-quality'>
-            <h1>Quality and materials</h1>
-            <p>Quality and materials refer to the craftsmanship and the type of metals, stones, or gems used in jewelry, which determine its durability, value, and appearance.</p>
+          <h3 className='fade-slide-up' ref={el => ref.current.push(el)}>Quality and materials</h3>
+          <p className='fade-slide-up' ref={el => ref.current.push(el)} style={{ transitionDelay: "0.2s" }}>
+            Quality and materials refer to the craftsmanship and the type of metals, stones, or gems used in jewelry...
+          </p>
         </div>
         <div className='Benifits-environmental'>
-            <h1>Environamental responsiblities</h1>
-            <p>Environmental responsibilities involve using sustainable practices and ethically sourced materials to minimize harm to the planet during jewelry production.</p>
+          <h3 className='fade-slide-up' ref={el => ref.current.push(el)}>Environmental responsibilities</h3>
+          <p className='fade-slide-up' ref={el => ref.current.push(el)} style={{ transitionDelay: "0.2s" }}>
+            Environmental responsibilities involve using sustainable practices and ethically sourced materials...
+          </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Benifits
+export default Benifits;
