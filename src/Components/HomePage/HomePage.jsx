@@ -3,12 +3,15 @@ import './HomePage.css'
 import Navbar from '../Navbar/Navbar'
 import Divisions from '../Divisions/Divisions'
 import Wallpaper from '../Wallpaper/Wallpaper'
-import BestSalers from '../BestSalers/BestSalers'
+// import BestSalers from '../BestSalers/BestSalers'
 import Payments from '../Payments/Payments'
 import Lookbook from '../Lookbook/Lookbook'
 import Benifits from '../Benifits/Benifits'
 import Footer from '../Footer/Footer'
 import img from '../../assets/Ringspng.png'
+import BestSale from '../BestSale/BestSale'
+import Catagories from '../Catagories/Catagories'
+import ShopImage from '../Shop-Image/ShopImage'
 function HomePage() {
   const hotspots = [
     {
@@ -37,10 +40,13 @@ function HomePage() {
        {/* <Navbar/> */}
     <div style={{margin:"0px 30px"}}>
       <Wallpaper/>
+      <Catagories/>
+      <BestSale/>
       {/* <BestSalers/> */}
       <Benifits/>
       {/* <Poster/> */}
       <Lookbook hotspots={hotspots} />
+      <ShopImage/>
       <Payments/>
       <Footer/>
     </div>

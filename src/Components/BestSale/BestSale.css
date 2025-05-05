@@ -1,0 +1,80 @@
+.best-sale-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5%;
+  position: relative;
+}
+
+.best-sale-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-sale-img-div {
+  transition: transform 0.5s ease;
+}
+
+.best-sale-image {
+  height: 400px;
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.index-0 {
+  transform: scale(0.8) rotateZ(-3deg) translateY(40px);
+  z-index: 1;
+  height: 375px;
+}
+
+.index-1 {
+  transform: scale(0.9) rotateZ(-2deg) translateY(20px);
+  z-index: 2;
+  height: 400px;
+}
+
+.index-2 {
+  transform: scale(1.0) rotateZ(0deg) translateY(0);
+  z-index: 3;
+  height: 410px;
+}
+
+.index-3 {
+  transform: scale(0.9) rotateZ(2deg) translateY(20px);
+  z-index: 2;
+  height: 400px;
+}
+
+.index-4 {
+  transform: scale(0.8) rotateZ(3deg) translateY(40px);
+  z-index: 1;
+  height: 375px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
