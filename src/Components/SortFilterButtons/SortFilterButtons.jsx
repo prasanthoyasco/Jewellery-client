@@ -4,6 +4,7 @@ import './SortFilterButtons.css';
 const SortFilterButtons = ({ onSortChange, onFilterChange }) => {
   const [showButtons, setShowButtons] = useState(true);
   const [scrollTimeout, setScrollTimeout] = useState(null);
+  const [showSortModal, setShowSortModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

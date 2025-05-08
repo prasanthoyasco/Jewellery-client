@@ -20,8 +20,13 @@ function AddToCartNav() {
         <h1>{product?.price}</h1>
         <p>{product?.name}</p>
       </div>
+
       <button onClick={handleAddToCart}>Add to Cart</button>
-      <button>Buy Now</button>
+      <button onClick={() => navigate('/checkout', { state: product })}>Buy Now</button>
+
+
+      {/* Display below */}
+      <h3>Preview Item:</h3>
     </div>
   );
 }

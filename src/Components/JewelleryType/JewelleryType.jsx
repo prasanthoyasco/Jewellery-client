@@ -101,6 +101,10 @@ function JewelleryType() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState(null);
   const { likedItems, toggleLike } = useLikedItems();
+  const [showSortModal, setShowSortModal] = useState(false);
+  const [showFilterModal, setShowFilterModal] = useState(false);
+
+
 
 
   useEffect(() => {
@@ -162,13 +166,82 @@ function JewelleryType() {
       </div>
 
       <SortFilterButtons
-        onSortChange={(sortOption) => {
-          // Add sort logic if needed
-        }}
-        onFilterChange={(filterOption) => {
-          setActiveFilter(filterOption);
-        }}
-      />
+  onSortChange={(sortOption) => {
+    if (sortOption === 'open') setShowSortModal(true); // Open the Sort Modal
+  }}
+  onFilterChange={(filterOption) => {
+    if (filterOption === 'open') setShowFilterModal(true); // Open the Filter Modal
+  }}
+/>
+
+{showSortModal && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <h3>Sort & Filter Options</h3>
+      <div className="modal-btns">
+        {filterButtonList.map((filter, index) => (
+          <button
+            key={index}
+            className="modal-filter-btn"
+            onClick={() => {
+              setActiveFilter(filter.text);
+              setShowSortModal(false);
+            }}
+          >
+            {filter.text}
+          </button>
+        ))}
+        <button
+          className="modal-filter-btn reset-btn"
+          onClick={() => {
+            setActiveFilter(null);
+            setShowSortModal(false);
+          }}
+        >
+          Reset
+        </button>
+        <button className="modal-close-btn" onClick={() => setShowSortModal(false)}>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
+{showFilterModal && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <h3>Filter Options</h3>
+      <div className="modal-btns">
+        {filterButtonList.map((filter, index) => (
+          <button
+            key={index}
+            className="modal-filter-btn"
+            onClick={() => {
+              setActiveFilter(filter.text);
+              setShowFilterModal(false); // Close modal after applying filter
+            }}
+          >
+            {filter.text}
+          </button>
+        ))}
+        <button
+          className="modal-filter-btn reset-btn"
+          onClick={() => {
+            setActiveFilter(null);
+            setShowFilterModal(false); // Close modal after resetting filter
+          }}
+        >
+          Reset
+        </button>
+        <button className="modal-close-btn" onClick={() => setShowFilterModal(false)}>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }

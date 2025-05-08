@@ -12,6 +12,8 @@ import JewelleryType from './Components/JewelleryType/JewelleryType';
 import { LikedItemsProvider } from './Components/LikedItemsContext/LikedItemsContext';
 import LikesPage from './Components/LikesPage/LikesPage';
 import CartPage from './Components/CartPage/CartPage';
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
+import PaymentPage from './Components/PaymentPage/PaymentPage';
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -42,6 +44,8 @@ function App() {
         <Route path="/category/:categoryName" element={<JewelleryType/>} />
         <Route path="/likes" element={<LikesPage/>} />
         <Route path="/cart" element={<CartPage/>} />
+        <Route path="/checkout" element={<CheckoutPage/>} />
+        <Route path="/payment-page" element={<PaymentPage/>} />
         </Routes>
 
       </Router>

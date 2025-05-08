@@ -1,0 +1,394 @@
+.checkout-box-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.shipping-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(130, 129, 129);
+    padding: 40px;
+    width: 600px;
+    position: relative;
+    margin-bottom: 20px; /* Space between multiple cards */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.add-address {
+    background: none;
+    border: none;
+    color: #cc1e4a;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.address-content {
+    display: flex;
+    margin-top: 16px;
+    align-items: flex-start;
+}
+
+.radio-indicator {
+    padding-right: 10px;
+    margin-top: 4px;
+}
+
+.radio-dot {
+    height: 14px;
+    width: 14px;
+    background-color: #f8b5c2;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #cc1e4a;
+    display: inline-block;
+}
+
+.address-details {
+    flex: 1;
+}
+
+.name {
+    font-weight: bold;
+    color: #333;
+}
+
+.address, .phone {
+    margin: 4px 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.billing-checkbox {
+    margin-top: 8px;
+}
+
+.billing-checkbox label {
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.address-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: 16px;
+}
+
+.edit-btn {
+    background-color: #f8b5c2;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #800030;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #cc1e4a;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal-overlay, .edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Shared modal content style */
+.modal-content, .shipping-modal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+.shipping-modal h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Input styles */
+.shipping-modal input[type="text"],
+.shipping-modal input[type="email"],
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+}
+
+/* Input group styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group .flag {
+    background: #f4f4f4;
+    border-radius: 30px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Checkbox alignment */
+.checkbox-group {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 6px;
+}
+
+/* Modal buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.cancel-btn {
+    background: #f8d7da;
+    color: #cc1e4a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #cc1e4a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Toggle switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* WhatsApp updates section */
+.whatsapp-updates {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(130, 129, 129);
+    margin-top: 5%;
+    height: 50px;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Payment card */
+.payment-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(130, 129, 129);
+    padding: 20px;
+    width: 600px;
+}
+
+.payment-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.item-count {
+    font-weight: normal;
+    font-size: 14px;
+    color: #888;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.amount {
+    font-weight: 500;
+}
+
+.free {
+    font-weight: 600;
+    color: #28a745;
+}
+
+.divider {
+    border-top: 1px dashed #ddd;
+    margin: 10px 0;
+}
+
+.grand-total-box {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.grand-amount {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shipping-card, .payment-card, .whatsapp-updates {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .whatsapp-updates {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    .payment-card {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .modal-content, .shipping-modal {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .shipping-card, .payment-card {
+        padding: 15px;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .card-header h3 {
+        font-size: 1rem;
+    }
+
+    .address-details {
+        font-size: 0.85rem;
+    }
+
+    .payment-row {
+        font-size: 14px;
+    }
+
+    .modal-content, .shipping-modal {
+        width: 100%;
+        max-width: 300px;
+    }
+    .checkout-box-container{
+        margin: 35% 10px;
+    }
+    .billing-checkbox{
+        display: flex;
+    }
+    .whatsapp-updates{
+        width: 100%;
+    }
+    .cart-item {
+        padding: 15px;
+        margin-top: 5%;
+    }
+}
+.icon-text{
+    display: flex;
+    gap: 20px;
+}
+.icon-text i{
+    font-size: 20px ;
+    color: green;
+}
