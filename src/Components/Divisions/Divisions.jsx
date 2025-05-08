@@ -16,7 +16,7 @@ function Divisions() {
         <a
           href={data.href}
           key={index}
-          className="fw-semibold fs-6"
+          className="fw-semibold"
         >
           {data.name}
         </a>
