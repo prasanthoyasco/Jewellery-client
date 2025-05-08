@@ -1,0 +1,22 @@
+.product-page-home {
+    display: flex;
+    margin: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .product-page-home {
+      flex-direction: column; /* Stack the components vertically */
+      margin: 10px; /* Reduce margin */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-page-home {
+      flex-direction: column; /* Stack the components vertically */
+      margin: 10px;
+      gap: 10px; /* Smaller gap between stacked components */
+      margin-top: 25%;
+    }
+  }
+  

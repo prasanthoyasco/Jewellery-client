@@ -1,0 +1,152 @@
+/* General Styling */
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 15px;
+  width: 85%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background: #d9534f;
+  height: 100%;
+  width: 0%;
+  animation: fillProgress 1.2s ease forwards;
+  border-radius: 10px;
+}
+
+.percentage {
+  width: 10%;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+.bar-and-content {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.progress-bar-container {
+  height: fit-content;
+  width: 450px;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(236, 236, 236);
+}
+
+.customer-love-container {
+  width: 500px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 5%;
+}
+
+.customer-love-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.customer-love-a-tag {
+  text-align: end;
+  margin-top: 5%;
+}
+
+.customer-love-a-tag a {
+  color: #d9534f;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.love-title {
+  margin-left: 22px;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-bar-container {
+    width: 90%;
+    margin-top: 5%;
+    padding: 15px;
+  }
+
+  .customer-love-container {
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .progress-bar {
+    width: 80%;
+  }
+
+  .percentage {
+    font-size: 14px;
+  }
+
+  .bar-and-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .customer-love-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-bar-container {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .customer-love-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .progress-bar {
+    width: 70%;
+  }
+
+  .percentage {
+    font-size: 12px;
+  }
+
+  .bar-and-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .customer-love-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .customer-love-a-tag a {
+    font-size: 14px;
+  }
+
+  .love-title {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}

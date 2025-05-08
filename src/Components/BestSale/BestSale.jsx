@@ -10,6 +10,7 @@ import image7 from '../../assets/catagories-image7.jpg';
 import image8 from '../../assets/catagories-image8.jpg';
 import image9 from '../../assets/catagories-image9.jpg';
 import image10 from '../../assets/catagories-image10.webp';
+import { useNavigate } from 'react-router-dom';
 
 const products = [
   { id: 1, name: 'Elegant Charm Gold and Diamond...', price: '₹1,03,065', image: image1 },
@@ -27,6 +28,7 @@ const products = [
 const BestSale = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
+  const navigate = useNavigate();
 
 const nextProduct = () => {
   setAnimate(true);
@@ -75,10 +77,10 @@ const prevProduct = () => {
   {getVisibleProducts().map((item, index) => (
     <div key={`${item.id}-${index}`} className={`best-sale-img-div index-${index}`}>
       <img 
-        src={item.image} 
-        className="best-sale-image" 
-        alt={item.name} 
-      />
+  src={item.image} 
+  className="best-sale-image" 
+  alt={item.name} 
+  onClick={() => navigate(`/product/${item.id}`, { state: item })}/>
     </div>
   ))}
 </div>

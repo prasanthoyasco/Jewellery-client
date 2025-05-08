@@ -1,0 +1,139 @@
+/* General Styling */
+.product-offer-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .offer-heading-image {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .product-offer-container {
+    width: 500px;
+    height: fit-content;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-top: 5%;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+  .product-offer-container i {
+    font-size: 25px;
+  }
+  
+  .pink-div {
+    background-color: rgb(198, 43, 95);
+    height: fit-content;
+    width: 450px;
+    border-radius: 20px;
+    margin-top: 5%;
+    color: white;
+    padding: 20px;
+  }
+  
+  .offer-percent {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5%;
+    align-items: center;
+  }
+  
+  .offer-percent h3 {
+    color: white;
+  }
+  
+  .coupon-div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .coupon-code {
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .coupon-code h5 {
+    color: black;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-offer-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .pink-div {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .offer-heading-image {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .offer-percent {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .coupon-div {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .coupon-code {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .product-offer-container i {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-offer-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .pink-div {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .offer-heading-image {
+      gap: 5px;
+    }
+  
+    .offer-percent {
+      gap: 5px;
+      margin-bottom: 3%;
+    }
+  
+    .coupon-div {
+      gap: 5px;
+    }
+  
+    .coupon-code {
+      width: 100%;
+      padding: 8px;
+    }
+  
+    .product-offer-container i {
+      font-size: 20px;
+    }
+  }
+  
