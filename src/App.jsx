@@ -15,7 +15,6 @@ import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import PaymentPage from './Components/PaymentPage/PaymentPage';
 import LoginPopup from './Components/LoginPopup/LoginPopup';
 import { ModalProvider } from './Components/ModalContext/ModalContext';
-import UserInfoPage from './Components/UserInfoPage/UserInfoPage';
 import PaymentSuccess from './Components/PaymentSuccess/PaymentSuccess';
 import Footer from './Components/Footer/Footer';
 
@@ -53,7 +52,6 @@ function App() {
         <Route path="/cart" element={<CartPage/>} />
         <Route path="/checkout" element={<CheckoutPage/>} />
         <Route path="/payment-page" element={<PaymentPage/>} />
-        <Route path="/user-info" element={<UserInfoPage/>} />
         <Route path="/payment-success" element={<PaymentSuccess/>} />
         </Routes>
         

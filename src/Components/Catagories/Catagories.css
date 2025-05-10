@@ -10,9 +10,9 @@
   scroll-behavior: smooth;
   gap: 1rem;
   padding: 1rem;
-  /* Apply the hide-scrollbar class */
   -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
 }
 
 #shopByCategorySlider::-webkit-scrollbar {
@@ -61,6 +61,12 @@
   color: white;
   flex: 1;
   min-height: 150px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animation for hover effect */
+}
+
+.category-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  opacity: 0.9; /* Slight transparency on hover */
 }
 
 /* Background Colors */
@@ -76,7 +82,8 @@
   background-color: #c0ccffbe;
   color: #222;
 }
-.categoryheading{
+
+.categoryheading {
   text-align: center;
 }
 
@@ -88,7 +95,11 @@
   width: 100%;
   text-align: center;
   font-weight: 500;
+  color: white;
   font-family: "Montserrat", sans-serif !important;
+  background: linear-gradient(to right,rgba(0, 0, 0, 0.237),rgba(0, 0, 0, 0.614));
+
+
 }
 
 .shop-by-cat-nav {
@@ -105,6 +116,11 @@
   font-weight: bold;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.shop-by-cat-nav:hover {
+  transform: scale(1.1); /* Slight zoom effect for nav buttons */
 }
 
 .slide-back {
@@ -128,4 +144,3 @@
 .hide-scrollbar {
   -ms-overflow-style: none;
 }
-

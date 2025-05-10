@@ -25,7 +25,7 @@ function Benifits() {
   }, []);
 
   return (
-    <div className='Benifits' style={{ display: "flex", justifyContent: "space-between", gap: "50px", margin: "5% 0%" }}>
+    <div className='Benifits'>
       <div className='Benifits-experience'>
         <img src={img} alt="Image" className='rotate' />
         <h3 className='fade-slide-up' ref={el => ref.current.push(el)}>25 years of experience and trust</h3>

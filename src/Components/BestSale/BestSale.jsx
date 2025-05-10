@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './BestSale.css';
 import image1 from '../../assets/catagories-image1.jpg';
 import image2 from '../../assets/catagories-image2.webp';
@@ -53,7 +53,35 @@ const products = [
 const BestSale = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
+  const [scrollDir, setScrollDir] = useState('down');
+  const containerRef = useRef(null);
   const navigate = useNavigate();
+
+  // Scroll direction detection
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const direction = currentScrollY > lastScrollY ? 'down' : 'up';
+      setScrollDir(direction);
+      lastScrollY = currentScrollY;
+
+      const el = containerRef.current;
+      if (el && isInViewport(el)) {
+        el.classList.remove('from-top', 'from-bottom');
+        el.classList.add(direction === 'down' ? 'from-bottom' : 'from-top');
+      }
+    };
+
+    const isInViewport = (element) => {
+      const rect = element.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const nextProduct = () => {
     setAnimate(true);
@@ -68,11 +96,11 @@ const BestSale = () => {
       (prevIndex) => (prevIndex - 1 + products.length) % products.length
     );
   };
+
   const getVisibleProducts = () => {
     const visibleProducts = [];
     const productCount = products.length;
 
-    // Always show 5 products centered around currentIndex
     for (let i = -2; i <= 2; i++) {
       const index = (currentIndex + i + productCount) % productCount;
       visibleProducts.push(products[index]);
@@ -81,44 +109,45 @@ const BestSale = () => {
     return visibleProducts;
   };
 
-  // const nextProduct = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
-  // };
-
-  // const prevProduct = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
-  // };
-
   return (
     <>
       <div className="best-sale-text">
         <h1>Our BestSeller</h1>
         <p className="my-3">Select from BestSeller</p>
       </div>
-      <div className="best-sale-container">
+
+      <div className="best-sale-container" ref={containerRef}>
         <button className="slider-btn prev-btn" onClick={prevProduct}>
-        <i className="bi bi-arrow-left"></i>
+          <i className="bi bi-arrow-left"></i>
         </button>
 
-      <div className={`best-sale-images ${animate ? 'slide' : ''}`}>
-  {getVisibleProducts().map((item, index) => (
-    <div key={`${item.id}-${index}`} className={`best-sale-img-div index-${index}`}>
-      <img 
-  src={item.image} 
-  className="best-sale-image" 
-  alt={item.name} 
-  onClick={() => navigate(`/product/${item.id}`, { state: item })}/>
-    </div>
-  ))}
-</div>
+        <div className={`best-sale-images ${animate ? 'slide' : ''}`}>
+          {getVisibleProducts().map((item, index) => (
+            <div
+              key={`${item.id}-${index}`}
+              className={`best-sale-img-div index-${index}`}
+            >
+              <img
+                src={item.image}
+                className="best-sale-image"
+                alt={item.name}
+                onClick={() =>
+                  navigate(`/product/${item.id}`, { state: item })
+                }
+              />
+              <div className="category-name">{item.name}</div>
+            </div>
+          ))}
+        </div>
 
         <button className="slider-btn next-btn" onClick={nextProduct}>
-        <i className="bi bi-arrow-right"></i>
+          <i className="bi bi-arrow-right"></i>
         </button>
       </div>
-      <div class="stars-bg"></div>
-      <div class="shooting-star"></div>
-      <div class="shooting-star"></div>
+
+      <div className="stars-bg"></div>
+      <div className="shooting-star"></div>
+      <div className="shooting-star"></div>
     </>
   );
 };
