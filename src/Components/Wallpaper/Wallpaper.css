@@ -27,6 +27,14 @@
 .carousel-caption h1{
     color: aliceblue !important;
 }
+.carousel-control-prev-icon {
+  display: none;
+}
+
+.carousel:hover .carousel-control-prev-icon {
+  display: inline-block;
+}
+
   
 @media (max-width: 480px) {
     .wallpaper-image {

@@ -7,6 +7,7 @@ import warantyImages1 from '../../assets/bis.svg';
 import warantyImages2 from '../../assets/0ne-year-waranty.svg';
 import Navbar from '../Navbar/Navbar';
 import { useCart } from '../CartContext/CartContext';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const images = [warantyImages, warantyImages1, warantyImages2];
 
@@ -17,12 +18,13 @@ function CartPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const { cartItems } = useCart();
-
+  const { state: product } = useLocation(); // Get the data passed through navigate
+  const navigate = useNavigate();
   // Ensure there's a product in the cart
-  const product = cartItems[0];
+  const products = cartItems[0];
   
   // Check if the product exists and get its price, defaulting to '0' if not
-  const productPrice = product?.price || 0;
+  const productPrice = products?.price || 0;
 
   // Formatting the product price for display (₹ 1,04,165)
   const formattedPrice = productPrice.toLocaleString('en-IN');
@@ -62,7 +64,7 @@ function CartPage() {
                 {showPincodeInput && (
                   <div className="pincode-input-section">
                     <div className="country-select">
-                      <span>🇮🇳</span>
+                      <img src='https://flagcdn.com/w40/in.png'/>
                       <select>
                         <option value="IN">IN</option>
                       </select>
@@ -151,6 +153,19 @@ function CartPage() {
           </div>
         </div>
       </div>
+
+      <div className="payment-route-container">
+      <div className="product-details">
+        <img src={product?.image} alt={product?.name} />
+        <h1>{product?.price}</h1>
+        <p>{product?.name}</p>
+      </div>
+
+      {/* You can now access the product details here */}
+      <button onClick={() => navigate('/checkout', { state: product })} className='payment-btn'>
+        Continue
+      </button>
+    </div>
     </>
   );
 }

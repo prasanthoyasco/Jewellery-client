@@ -31,12 +31,24 @@ function Navbar() {
         
         <div className="navbar-right-icons d-flex">
         <a className="d-flex align-items-center text-decoration-none" href="tel:+919877565432">
-            <i className="bi bi-whatsapp fs-4"></i>
             {/* <span className="fs-6 mx-2">+91 98775 65432</span> */}
           </a>
+          
+          <a href="/search"><i className="bi bi-search fs-4"></i></a>
           <a href="/likes"><i className="bi bi-heart fs-4"></i></a>
-          <a href="/cart"><i className="bi bi-search fs-4"></i></a>
-          <a href="/search"><i className="bi bi-bag fs-4"></i></a>
+          <a href="/cart"><i className="bi bi-bag fs-4"></i></a>
+          <div className="profile-dropdown">
+  <div className="profile-trigger">
+  <i class="bi bi-person-circle"></i>
+  </div>
+  <div className="profile-menu">
+    <a href="/signin">Sign In</a>
+    <a href="/signup">Sign Up</a>
+  </div>
+</div>
+
+
+
         </div>
       </div>
     </div>

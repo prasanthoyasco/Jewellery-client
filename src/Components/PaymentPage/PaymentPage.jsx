@@ -90,7 +90,7 @@ function PaymentPage() {
       </div>
 
       {/* You can now access the product details here */}
-      <button onClick={() => navigate('/pay', { state: product })} className='payment-btn'>
+      <button onClick={() => navigate('/payment-success', { state: product })} className='payment-btn'>
         Continue
       </button>
     </div>

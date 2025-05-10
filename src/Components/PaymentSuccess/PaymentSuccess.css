@@ -1,0 +1,57 @@
+.payment-success-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .success-card {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .success-card h1 {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-bottom: 15px;
+  }
+  
+  .success-card p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .success-card button {
+    padding: 10px 25px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .success-card button:hover {
+    background-color: #218838;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  

@@ -53,6 +53,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: start;
     padding-bottom: 20px;
+    cursor: pointer;
   }
   
   .jewel-card img {
@@ -77,6 +78,9 @@
     margin-top: 6px;
     font-size: 14px;
   }
+  .jewel-card-details{
+    padding: 15px;
+  }
   
   .filter-btn.active {
     background-color: #f06eaa;
@@ -93,6 +97,8 @@
     position: relative;
     width: 100%;
     height: auto;
+    box-shadow: 0 4px 8px rgb(209, 208, 208);
+    border-radius: 20px;
   }
   
   .image-container img {
@@ -192,7 +198,6 @@
       gap: 10px;
       margin-top: 1rem;
   }
-
   .filter-btn {
       width: 100%; /* Ensure buttons fill their grid cells */
       padding: 10px 15px;

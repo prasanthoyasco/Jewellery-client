@@ -7,7 +7,6 @@ import Wallpaper from '../Wallpaper/Wallpaper'
 import Payments from '../Payments/Payments'
 import Lookbook from '../Lookbook/Lookbook'
 import Benifits from '../Benifits/Benifits'
-import Footer from '../Footer/Footer'
 import img from '../../assets/Ringspng.png'
 import BestSale from '../BestSale/BestSale'
 import Catagories from '../Catagories/Catagories'
@@ -48,7 +47,6 @@ function HomePage() {
       <Lookbook hotspots={hotspots} />
       <ShopImage/>
       <Payments/>
-      <Footer/>
     </div>
     </>
   )

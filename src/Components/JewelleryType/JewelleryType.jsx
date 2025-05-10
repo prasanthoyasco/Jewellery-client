@@ -4,7 +4,7 @@ import './JewelleryType.css';
 import Navbar from '../Navbar/Navbar';
 import SortFilterButtons from '../SortFilterButtons/SortFilterButtons';
 import { useLikedItems } from '../LikedItemsContext/LikedItemsContext';
-
+import { useNavigate } from 'react-router-dom';
 import jewelImage1 from '../../assets/jewel-type.webp';
 import jewelImage2 from '../../assets/jewel-type2.jpg';
 import jewelImage3 from '../../assets/jewel-type3.webp';
@@ -16,68 +16,84 @@ import jewelImage8 from '../../assets/jewe.webp';
 
 const gidText = [
   {
+    id:1,
     image: jewelImage1,
     stock: 'Only 1 stock Available',
     price: '4,999',
     priceValue: 4999,
     category: 'Pendant',
     text: 'The Tell-Tale Heart Yellow Gold Pendant',
+    name: "Radiant Pearl Necklace",
   },
   {
+    id:2,
     image: jewelImage2,
     stock: 'Only 2 stock Available',
     price: '5,999',
     priceValue: 5999,
     category: 'Pendant',
     text: 'Floral Whispers 14 Kt Gold & Pearl Pendant',
+    name: "Opulent Gold Earrings",
   },
   {
+    id:3,
     image: jewelImage3,
     stock: 'Only 3 stock Available',
     price: '6,999',
     priceValue: 6999,
     category: 'Nose Pin',
     text: '14KT Yellow Gold Diamond Nose Pin',
+    name: "Luxury Diamond Ring",
   },
   {
+    id:4,
     image: jewelImage4,
     stock: 'Only 2 stock Available',
     price: '7,999',
     priceValue: 7999,
     category: 'Earrings',
     text: 'Lavender Love Amethyst Drop Earrings',
+    name: "Gleaming Gold Bracelet",
   },
   {
+    id:5,
     image: jewelImage5,
     stock: 'Only 1 stock Available',
     price: '8,999',
     priceValue: 8999,
     category: 'Pendant',
     text: 'Golden Elegance 18KT Pearl Pendant',
+    name: "Floral Gold Stud Earrings",
   },
   {
+    id:6,
     image: jewelImage6,
     stock: 'Only 2 stock Available',
     price: '9,999',
     priceValue: 9999,
     category: 'Pendant',
     text: 'The Tell-Tale Heart Yellow Gold Pendant',
+    name: "Delicate Mangalsutra Chain",
   },
   {
+    id:7,
     image: jewelImage7,
     stock: 'Only 3 stock Available',
     price: '10,999',
     priceValue: 10999,
     category: 'Pendant',
     text: 'The Tell-Tale Heart Yellow Gold Pendant',
+    name: "Elegant Charm Gold and Diamond...",
   },
   {
+    id:8,
     image: jewelImage8,
     stock: 'Only 2 stock Available',
     price: '11,999',
     priceValue: 11999,
     category: 'Pendant',
     text: 'The Tell-Tale Heart Yellow Gold Pendant',
+    name: "Lustrous Knot Pearl & Gold Chain",
   },
 ];
 
@@ -103,7 +119,7 @@ function JewelleryType() {
   const { likedItems, toggleLike } = useLikedItems();
   const [showSortModal, setShowSortModal] = useState(false);
   const [showFilterModal, setShowFilterModal] = useState(false);
-
+  const navigate = useNavigate()
 
 
 
@@ -149,7 +165,7 @@ function JewelleryType() {
         {filteredData.map((data, index) => {
           const isLiked = likedItems.some((item) => item.text === data.text);
           return (
-            <div className='jewel-card' key={index}>
+            <div className='jewel-card' key={index} onClick={() => navigate(`/product/${data.id}`, { state: data })}>
               <div className='image-container'>
                 <img src={data.image} alt={data.text} />
                 <i
@@ -157,9 +173,11 @@ function JewelleryType() {
                   onClick={() => toggleLike(data)}
                 ></i>
               </div>
-              <p className='stock'>{data.stock}</p>
-              <h2 className='price-btn'>₹ {data.price}</h2>
-              <p className='description'>{data.text}</p>
+              <div className='jewel-card-details'>
+                <p className='stock'>{data.stock}</p>
+                <h2 className='price-btn'>₹ {data.price}</h2>
+                <p className='description'>{data.text}</p>
+              </div>
             </div>
           );
         })}

@@ -59,23 +59,18 @@ function Wallpaper() {
               <source src={vid} type="video/webm" />
               Your browser does not support the video tag.
             </video>
-            <img
-              src={Atelierlogo}
-              alt="Logo"
-              className="position-absolute"
-              style={{ top: '7%', left: '7%', transform: 'translate(-50%, -50%)', filter: "invert(100%)", height: '40px', zIndex: 99 }}
-            />
 
             <div className="carousel-caption d-none d-md-block">
               <h1
                 className='text-capitalize mb-2 fade-slide-up'
-                style={{ letterSpacing: "2px" }}
+                style={{ letterSpacing: "2px" ,fontSize:"x-large" }}
                 ref={el => ref.current.push(el)}
               >
                 {captions[i].title}
               </h1>
               <p
                 className='mt-3 fade-slide-up'
+                style={{fontSize:"smaller"}}
                 ref={el => ref.current.push(el)}
               >
                 {captions[i].desc}
@@ -92,11 +87,11 @@ function Wallpaper() {
         ))}
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#wallpaperCarousel" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="carousel-control-prev-icon opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
       <button className="carousel-control-next" type="button" data-bs-target="#wallpaperCarousel" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="carousel-control-next-icon opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>

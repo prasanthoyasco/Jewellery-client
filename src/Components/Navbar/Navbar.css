@@ -37,6 +37,10 @@
 .navbar-right-icons a{
  color: #333;
  margin-left: 10px;
+ font-size: 25px;
+}
+.navbar-right-icons i{
+  font-size: 25px;
 }
 .navbar-right-icons a:hover{
   color: #bf9968;
@@ -176,4 +180,42 @@
   .navbar-desktop {
     display: flex;
   }
+}
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.profile-trigger {
+  cursor: pointer;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.profile-dropdown:hover .profile-menu {
+  display: block;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.profile-menu a:hover {
+  background-color: #f2f2f2;
 }

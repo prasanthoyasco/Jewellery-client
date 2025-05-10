@@ -9,8 +9,12 @@ function AddToCartNav() {
   const navigate = useNavigate();
 
   const handleAddToCart = () => {
-    addToCart(product);
-    navigate('/cart');
+      addToCart(product);
+      navigate('/cart', { state: product });
+  };
+  
+  const handleBuyNow = () => {
+      navigate('/checkout', { state: product });
   };
 
   return (
@@ -22,11 +26,7 @@ function AddToCartNav() {
       </div>
 
       <button onClick={handleAddToCart}>Add to Cart</button>
-      <button onClick={() => navigate('/checkout', { state: product })}>Buy Now</button>
-
-
-      {/* Display below */}
-      <h3>Preview Item:</h3>
+      <button onClick={handleBuyNow}>Buy Now</button>
     </div>
   );
 }
