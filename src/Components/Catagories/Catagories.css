@@ -61,13 +61,15 @@
   color: white;
   flex: 1;
   min-height: 150px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animation for hover effect */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
 }
 
 .category-card:hover {
   transform: scale(1.05); /* Slight zoom effect */
   opacity: 0.9; /* Slight transparency on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow effect */
 }
+
 
 /* Background Colors */
 .background-black {

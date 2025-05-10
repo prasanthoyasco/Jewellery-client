@@ -146,20 +146,7 @@ function JewelleryType() {
         <h5 className='animated-text'>{pinkDivText[currentIndex].text}</h5>
       </div>
 
-      <div className='filter-btn-div'>
-        {filterButtonList.map((filter, index) => (
-          <button
-            key={index}
-            className={`filter-btn ${activeFilter === filter.text ? 'active' : ''}`}
-            onClick={() => setActiveFilter(filter.text)}
-          >
-            {filter.text}
-          </button>
-        ))}
-        <button className='filter-btn reset-btn' onClick={() => setActiveFilter(null)}>
-          Reset
-        </button>
-      </div>
+
 
       <div className='jewel-grid'>
         {filteredData.map((data, index) => {

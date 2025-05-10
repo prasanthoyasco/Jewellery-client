@@ -1,4 +1,27 @@
-/* General Styling */
+/* ====== Animations ====== */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ====== General Styling ====== */
 .product-media-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -9,26 +32,28 @@
   top: 100px;
   align-self: flex-start;
   z-index: 1;
+  animation: fadeInSlideUp 0.8s ease forwards;
 }
 
 .product-media-item {
   width: 370px;
   height: 370px;
+  transition: transform 0.3s ease;
+  animation: zoomIn 0.6s ease-in-out forwards;
 }
 
-.product-page-image {
-  width: 350px;
-  height: 350px;
-  border-radius: 8px;
+.product-media-item:hover {
+  transform: scale(1.03);
 }
 
+.product-page-image,
 .product-page-video {
   width: 350px;
   height: 350px;
   border-radius: 8px;
 }
 
-/* Mobile carousel styling */
+/* ====== Mobile Carousel Styling ====== */
 .mobile-carousel .carousel-item {
   display: flex !important;
   justify-content: center;
@@ -50,7 +75,7 @@
   margin-bottom: 2rem;
 }
 
-/* Responsive Design */
+/* ====== Responsive Design ====== */
 @media (max-width: 1024px) {
   .product-media-container {
     grid-template-columns: repeat(2, 1fr);
@@ -69,10 +94,9 @@
   }
 }
 
-/* Mobile View (768px or smaller) */
 @media (max-width: 768px) {
   .product-media-container {
-    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    grid-template-columns: 1fr;
     margin-left: 3%;
     margin-top: 5%;
   }
@@ -89,7 +113,7 @@
   }
 
   .mobile-carousel {
-    padding: 0; /* Remove extra padding around carousel */
+    padding: 0;
   }
 
   .mobile-carousel img,
@@ -100,10 +124,9 @@
   }
 }
 
-/* Small Mobile View (480px or smaller) */
 @media (max-width: 480px) {
   .product-media-container {
-    grid-template-columns: 1fr; /* Stack items vertically on mobile devices */
+    grid-template-columns: 1fr;
     margin-left: 2%;
     margin-top: 3%;
   }

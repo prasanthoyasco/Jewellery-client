@@ -1,54 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import Atelierlogo from '../../assets/Atelier-logo-nav.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Divisions from '../Divisions/Divisions';
+import { useModal } from '../ModalContext/ModalContext';
 
 function Navbar() {
+  const { setIsLoginOpen } = useModal();
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+
+  const openLoginModal = () => setIsLoginOpen(true);
+  const toggleSearchInput = () => setIsSearchVisible(prev => !prev);
+  const toggleProfileMenu = () => setIsProfileMenuOpen(prev => !prev);
+
   return (
     <div className="navbar-container">
       <div className="navbar-mobile">
         <a className="navbar-logo-mobile" href="/">
           <img src={Atelierlogo} alt="Atelier" height="50px" />
-          {/* <span className="logo-text-mobile">Jewellery</span> */}
         </a>
         <button className="hamburger-menu">
           <i className="bi bi-list fs-3"></i>
         </button>
       </div>
+
       <div className="navbar-desktop">
-      <div className="navbar-logo-desktop">
+        <div className="navbar-logo-desktop">
           <img src={Atelierlogo} alt="Atelier" height="60px" />
           <p className="">Jewellery</p>
         </div>
-        {/* <div className="navbar-left">
-          <a className="d-flex align-items-center text-decoration-none" href="tel:+919877565432">
-            <i className="bi bi-whatsapp fs-4"></i>
-            <span className="fs-6 mx-2">+91 98775 65432</span>
-          </a>
-        </div> */}
-              <Divisions/>
-        
-        <div className="navbar-right-icons d-flex">
-        <a className="d-flex align-items-center text-decoration-none" href="tel:+919877565432">
-            {/* <span className="fs-6 mx-2">+91 98775 65432</span> */}
-          </a>
-          
-          <a href="/search"><i className="bi bi-search fs-4"></i></a>
-          <a href="/likes"><i className="bi bi-heart fs-4"></i></a>
-          <a href="/cart"><i className="bi bi-bag fs-4"></i></a>
-          <div className="profile-dropdown">
-  <div className="profile-trigger">
-  <i class="bi bi-person-circle"></i>
-  </div>
-  <div className="profile-menu">
-    <a href="/signin">Sign In</a>
-    <a href="/signup">Sign Up</a>
-  </div>
-</div>
 
+        <Divisions />
 
+        <div className="navbar-right-icons d-flex align-items-center">
+          {/* Search */}
+          <div className="search-icon-wrapper">
+            <i className="bi bi-search fs-4" onClick={toggleSearchInput} style={{ cursor: 'pointer' }}></i>
+            {isSearchVisible && (
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search..."
+                autoFocus
+              />
+            )}
+          </div>
 
+          {/* Likes & Cart */}
+          <a href="/likes"><i className="bi bi-heart fs-4 ms-3"></i></a>
+          <a href="/cart"><i className="bi bi-bag fs-4 ms-3"></i></a>
+
+          {/* Profile (Click to toggle menu) */}
+          <div className="profile-dropdown ms-3 position-relative">
+            <div className="profile-trigger" onClick={toggleProfileMenu} style={{ cursor: 'pointer' }}>
+              <i className="bi bi-person-circle fs-4"></i>
+            </div>
+            {isProfileMenuOpen && (
+              <div className="profile-menu">
+                <a onClick={openLoginModal}>Sign In</a>
+                <a onClick={openLoginModal}>Sign Up</a>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

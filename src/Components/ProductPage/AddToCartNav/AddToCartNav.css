@@ -11,6 +11,20 @@
   padding: 12px 20px;
   box-sizing: border-box;
   border-top: 1px solid #eee;
+  opacity: 0; /* Start hidden */
+  transform: translateY(100px); /* Start off-screen */
+  animation: slideIn 0.5s ease forwards; /* Animation applied */
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .product-details {
@@ -42,7 +56,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 300px;
-
 }
 
 .add-to-cart-container button:first-of-type {

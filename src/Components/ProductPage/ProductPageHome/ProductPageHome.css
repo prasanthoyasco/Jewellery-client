@@ -1,22 +1,35 @@
+/* Fade In Left Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Main Container */
 .product-page-home {
-    display: flex;
-    margin: 20px;
+  display: flex;
+  margin: 20px;
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .product-page-home {
+    flex-direction: column;
+    margin: 10px;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .product-page-home {
-      flex-direction: column; /* Stack the components vertically */
-      margin: 10px; /* Reduce margin */
-    }
+}
+
+@media (max-width: 768px) {
+  .product-page-home {
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    margin-top: 25%;
   }
-  
-  @media (max-width: 768px) {
-    .product-page-home {
-      flex-direction: column; /* Stack the components vertically */
-      margin: 10px;
-      gap: 10px; /* Smaller gap between stacked components */
-      margin-top: 25%;
-    }
-  }
-  
+}

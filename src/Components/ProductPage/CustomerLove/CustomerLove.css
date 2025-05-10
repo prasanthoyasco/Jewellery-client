@@ -79,6 +79,16 @@
   font-weight: 400;
 }
 
+/* Animation for progress bar */
+@keyframes fillProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%; /* Change to desired fill percentage */
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .progress-bar-container {

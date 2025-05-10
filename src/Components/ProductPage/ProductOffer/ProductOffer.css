@@ -1,142 +1,175 @@
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* General Styling */
 .product-offer-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .offer-heading-image {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-heading-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-offer-container {
+  width: 500px;
+  height: fit-content;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-top: 5%;
+  padding: 20px;
+  justify-content: space-between;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.product-offer-container i {
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-offer-container i:hover {
+  transform: scale(1.2);
+}
+
+.pink-div {
+  background-color: rgb(198, 43, 95);
+  height: fit-content;
+  width: 450px;
+  border-radius: 20px;
+  margin-top: 5%;
+  color: white;
+  padding: 20px;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.offer-percent {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5%;
+  align-items: center;
+}
+
+.offer-percent h3 {
+  color: white;
+}
+
+.coupon-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.coupon-code {
+  background-color: white;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: popIn 0.5s ease-in-out;
+}
+
+.coupon-code:hover {
+  transform: scale(1.05);
+}
+
+.coupon-code h5 {
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .product-offer-container {
-    width: 500px;
-    height: fit-content;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    margin-top: 5%;
-    padding: 20px;
-    justify-content: space-between;
+    width: 90%;
+    padding: 15px;
   }
-  
-  .product-offer-container i {
-    font-size: 25px;
-  }
-  
+
   .pink-div {
-    background-color: rgb(198, 43, 95);
-    height: fit-content;
-    width: 450px;
-    border-radius: 20px;
-    margin-top: 5%;
-    color: white;
-    padding: 20px;
+    width: 100%;
+    padding: 15px;
   }
-  
-  .offer-percent {
-    display: flex;
+
+  .offer-heading-image {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
-    margin-bottom: 5%;
-    align-items: center;
   }
-  
-  .offer-percent h3 {
-    color: white;
+
+  .offer-percent {
+    flex-direction: column;
+    gap: 5px;
   }
-  
+
   .coupon-div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   .coupon-code {
-    background-color: white;
-    height: fit-content;
-    width: fit-content;
-    border-radius: 20px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .product-offer-container i {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-offer-container {
+    width: 100%;
     padding: 10px;
-    text-align: center;
   }
-  
-  .coupon-code h5 {
-    color: black;
+
+  .pink-div {
+    width: 100%;
+    padding: 10px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .product-offer-container {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    .pink-div {
-      width: 100%;
-      padding: 15px;
-    }
-  
-    .offer-heading-image {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  
-    .offer-percent {
-      flex-direction: column;
-      gap: 5px;
-    }
-  
-    .coupon-div {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .coupon-code {
-      width: 100%;
-      padding: 12px;
-    }
-  
-    .product-offer-container i {
-      font-size: 22px;
-    }
+
+  .offer-heading-image {
+    gap: 5px;
   }
-  
-  @media (max-width: 480px) {
-    .product-offer-container {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    .pink-div {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    .offer-heading-image {
-      gap: 5px;
-    }
-  
-    .offer-percent {
-      gap: 5px;
-      margin-bottom: 3%;
-    }
-  
-    .coupon-div {
-      gap: 5px;
-    }
-  
-    .coupon-code {
-      width: 100%;
-      padding: 8px;
-    }
-  
-    .product-offer-container i {
-      font-size: 20px;
-    }
+
+  .offer-percent {
+    gap: 5px;
+    margin-bottom: 3%;
   }
-  .product-offer-container i{
-    cursor: pointer;
+
+  .coupon-div {
+    gap: 5px;
   }
-  
+
+  .coupon-code {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .product-offer-container i {
+    font-size: 20px;
+  }
+}
