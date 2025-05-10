@@ -37,7 +37,8 @@
 
   
 @media (max-width: 480px) {
-    .wallpaper-image {
+    .wallpaper-video {
         height: 200px;
+        width: 100%;
     }
 }

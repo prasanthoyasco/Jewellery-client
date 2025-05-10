@@ -38,18 +38,32 @@
 }
 
 
-.best-sale-text{
+@keyframes textFadeIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.best-sale-text {
   text-align: center;
   margin-top: 5%;
   color: rgb(138, 63, 36);
+  animation: textFadeIn 1.2s ease-in-out forwards;
 }
-.best-sale-image {
-  height: 400px;
-  width: 300px;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
+
+.best-sale-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out; /* <- Smooth movement */
 }
+
 
 .best-sale-image:hover {
   transform: scale(1.07);
@@ -95,6 +109,20 @@
   transform: scale(0.9) rotateZ(3deg) translateY(40px);
   z-index: 1;
   height: 403px;
+}
+.categories-name {
+  position: absolute;
+  border-radius: 0 0 12px 12px;
+  bottom: 0;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  font-family: "Montserrat", sans-serif !important;
+  background: linear-gradient(to right,rgba(0, 0, 0, 0.237),rgba(0, 0, 0, 0.614));
+
+
 }
 
 .slider-btn {
@@ -148,3 +176,66 @@
 }
 
 
+@media (max-width: 1024px) {
+  .best-sale-image {
+    height: 320px;
+    width: 240px;
+  }
+
+  .index-0,
+  .index-1,
+  .index-2,
+  .index-3,
+  .index-4 {
+    transform: scale(0.9) translateY(0) rotateZ(0);
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .best-sale-container {
+    flex-direction: column;
+    margin-bottom: 20%;
+    gap: 30px;
+  }
+
+  .best-sale-images {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .best-sale-image {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .index-0,
+  .index-1,
+  .index-2,
+  .index-3,
+  .index-4 {
+    transform: none;
+    height: auto;
+  }
+
+  .slider-btn {
+    display: none; /* Hide arrows */
+  }
+
+  .categories-name {
+    position: static;
+    background: none;
+    color: rgb(138, 63, 36);
+    font-weight: 600;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-sale-text {
+    font-size: 1rem;
+    margin-top: 10%;
+  }
+}

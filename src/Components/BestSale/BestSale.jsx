@@ -135,7 +135,7 @@ const BestSale = () => {
                   navigate(`/product/${item.id}`, { state: item })
                 }
               />
-              <div className="category-name">{item.name}</div>
+              <div className="categories-name">{item.name}</div>
             </div>
           ))}
         </div>

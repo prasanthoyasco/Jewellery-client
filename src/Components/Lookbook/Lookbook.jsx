@@ -17,7 +17,7 @@ const Lookbook = ({ hotspots }) => {
           clearTimeout(timeoutRef.current);
           timeoutRef.current = setTimeout(() => {
             setShowHotspots(false);
-          }, 5000); // 5000ms = 5 seconds
+          }, 500000); // 5000ms = 5 seconds
         }
       },
       { threshold: 0.3 }

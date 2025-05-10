@@ -45,3 +45,38 @@
 .Shop-Img-words button:hover {
     background-color: rgb(238, 68, 68);
 }
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+    .Shop-img-div {
+      margin-top: 10%; /* Slightly more spacing for smaller screens */
+    }
+  
+    .Shop-Img {
+      height: 300px; /* Reduce image height on smaller screens */
+      object-position: center; /* Better centering for mobile */
+    }
+  
+    .Shop-Img-words {
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 0.5rem;
+      width: 90%;
+    }
+  
+    .Shop-Img-words h1 {
+      font-size: 2rem; /* Smaller font for heading */
+    }
+  
+    .Shop-Img-words p {
+      font-size: 14px; /* Smaller font for paragraph */
+    }
+  
+    .Shop-Img-words button {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+  }
+  

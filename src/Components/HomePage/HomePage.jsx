@@ -37,7 +37,7 @@ function HomePage() {
   return (
     <>
        {/* <Navbar/> */}
-    <div style={{margin:"0px 30px"}}>
+    <div className="HomePage-container">
       <Wallpaper/>
       <Catagories/>
       <BestSale/>
