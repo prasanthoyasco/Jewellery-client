@@ -1,0 +1,342 @@
+.pink-color-div {
+  margin-top: 6%;
+  background-color: rgb(243, 58, 89);
+  padding: 5px 20px;
+  text-align: center;
+  color: white;
+  animation: slideIn 1s ease-in-out; /* Added animation */
+}
+
+.animated-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  animation: fadeInOut 4s ease-in-out infinite, bounce 2s ease infinite; /* Added bounce animation */
+  letter-spacing: 0.8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.filter-btn{
+  background-color: white;
+  padding: 15px 20px;
+  margin: 30px;
+  border-radius: 20px;
+  border: 1px solid rgb(234, 233, 233);
+  transition: transform 0.3s ease-in-out; /* Added animation */
+}
+
+.filter-btn:hover {
+  transform: scale(1.05); /* Hover animation */
+}
+
+.filter-btn-div {
+  text-align: center;
+}
+
+.jewellery-type-container {
+  background-color: rgb(245, 243, 243);
+  animation: fadeIn 1.5s ease-out; /* Added fade-in animation */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Grid layout */
+.jewel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px;
+  animation: fadeIn 2s ease-out; /* Added fade-in animation */
+}
+
+.jewel-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  padding-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Added animation */
+}
+
+.jewel-card:hover {
+  transform: translateY(-5px); /* Hover animation */
+}
+
+.jewel-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.stock {
+  color: #ff4444;
+  font-weight: 600;
+  margin: 10px 0 4px;
+}
+
+.price {
+  color: gray;
+}
+
+.description {
+  color: #444;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.jewel-card-details {
+  padding: 15px;
+}
+
+.filter-btn.active {
+  background-color: #f06eaa;
+  color: white;
+}
+
+.filter-btn:focus {
+  outline: none;
+}
+
+.reset-btn {
+  background-color: #ccc;
+  color: #000;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgb(209, 208, 208);
+  border-radius: 20px;
+  transition: transform 0.2s ease-in-out; /* Added animation */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Hover animation */
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.heart-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 22px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.heart-icon:hover {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+.bi-heart-fill.heart-icon {
+  color: #e63946;
+}
+
+@media (max-width: 1024px) {
+  .jewel-grid {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 40px 30px;
+      gap: 16px;
+  }
+
+  .animated-text {
+      font-size: 1.6rem;
+  }
+
+  .filter-btn {
+      padding: 12px 18px;
+      margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jewel-grid {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 30px 20px;
+  }
+
+  .animated-text {
+      font-size: 1.4rem;
+  }
+
+  .filter-btn {
+      padding: 10px 16px;
+      margin: 16px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jewel-grid {
+      grid-template-columns: 1fr;
+      padding: 20px 10px;
+      gap: 12px;
+  }
+
+  .animated-text {
+      font-size: 1.2rem;
+  }
+
+  .filter-btn {
+      width: 90%;
+      margin: 12px auto;
+      display: block;
+  }
+
+  .jewel-card {
+      padding-bottom: 16px;
+  }
+
+  .description {
+      font-size: 13px;
+  }
+
+  .stock, .price {
+      font-size: 14px;
+  }
+
+  .heart-icon {
+      font-size: 20px;
+      bottom: 8px;
+      right: 8px;
+  }
+
+  .filter-btn-div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 1rem;
+  }
+
+  .filter-btn {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: black;
+      cursor: pointer;
+  }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeInOverlay 0.5s ease-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: slideInModal 0.5s ease-out;
+}
+
+/* Modal Buttons */
+.modal-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+/* Modal Filter Button */
+.modal-filter-btn {
+  background-color: #f0a5c6;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal-filter-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Close Button */
+.modal-close-btn {
+  background-color: #aaa;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: #888;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInOverlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInModal {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

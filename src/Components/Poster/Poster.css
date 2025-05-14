@@ -1,0 +1,34 @@
+.poster {
+    margin-top: 5%;
+    position: relative; 
+    width: 100%;
+  }
+  
+  .poster-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+  }
+  
+  .poster h3 {
+    position: absolute;
+    top: 67%;
+    left: 33%;
+    right: 8%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    color: #494949;
+    font-size: 2rem;
+    border-radius: 12px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    .poster h3{
+    top: 50%;
+    left: 36%;
+    font-size: 23px;
+}
+}

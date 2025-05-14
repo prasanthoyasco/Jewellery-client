@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1,h2,h3 {
+  font-family: "DM Serif Display", serif !important;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(191 153 104);
+}
+h4,h5,h6,p,a{
+  font-family: "Montserrat", sans-serif !important;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

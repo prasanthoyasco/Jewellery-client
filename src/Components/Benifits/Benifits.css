@@ -1,0 +1,85 @@
+.Benifits h3{
+ text-transform: capitalize;
+ margin-bottom: 16px;
+ color: rgb(191 153 104);
+}
+.Benifits{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 5% 0px;
+}
+
+  
+.Benifites-left{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.Benifits-experience{
+    width: 100%;
+    height: inherit;
+    padding: 20px 20px 20px 20px;
+    background-color:rgb(243, 218, 209);
+    border-radius: 20px;
+}
+.Benifits-experience:hover,
+.Benifits-quality:hover,
+.Benifits-environmental:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+
+.Benifits-quality{
+    width: 100%;
+    height: inherit;
+    padding: 5%;
+    background-color: rgb(246, 245, 250);
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+.Benifits-environmental{
+    width: 100%;
+    border-radius: 20px;
+    padding: 5%;
+    background-color: rgb(246, 245, 250);
+}
+
+@media (max-width: 780px) {
+    .Benifits,.Benifites-left{
+        gap:15px;
+    }
+    .Benifits-quality,
+    .Benifits-environmental{
+        margin: unset;
+        height: 100%;
+    }
+
+
+}
+
+@media (max-width: 780px) {
+    .Benifits {
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px;
+    }
+  
+    .Benifites-left {
+      flex-direction: column;
+    }
+  
+    .Benifits-quality,
+    .Benifits-environmental,
+    .Benifits-experience {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+  }
+  

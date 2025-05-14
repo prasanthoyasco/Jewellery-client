@@ -1,0 +1,141 @@
+/* General Styling */
+.delevery-card {
+  margin-top: 5%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  animation: slideIn 0.8s ease-out;
+}
+
+.delevery-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+  position: relative;
+  margin-bottom: 10%;
+  animation: slideIn 0.8s ease-out 0.2s forwards;
+}
+
+.delivery-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  animation: slideIn 0.8s ease-out 0.4s forwards;
+}
+
+.country-select {
+  display: flex;
+  align-items: center;
+  padding: 6px 1px;
+  border-radius: 20px;
+  background: #f1f1f1;
+  height: 50px;
+  animation: slideIn 0.8s ease-out 0.6s forwards;
+}
+
+.country-select img {
+  width: 20px;
+  height: 14px;
+}
+
+.arrow-icon {
+  font-size: 14px;
+  color: #555;
+}
+
+.pincode-input {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  background: #f1f1f1;
+  outline: none;
+  flex: 1;
+  height: 50px;
+  animation: slideIn 0.8s ease-out 0.6s forwards;
+}
+
+.check-btn {
+  background: none;
+  border: none;
+  color: #c00;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  animation: slideIn 0.8s ease-out 0.8s forwards;
+}
+
+/* Animation for delivery card elements */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .delevery-card {
+    width: 90%;
+    margin-top: 5%;
+    padding: 15px;
+  }
+
+  .delevery-header {
+    font-size: 16px;
+    gap: 8px;
+    margin-bottom: 5%;
+  }
+
+  .delivery-form {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .country-select, .pincode-input {
+    height: 40px;
+    padding: 6px 10px;
+  }
+
+  .check-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delevery-card {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .delevery-header {
+    font-size: 14px;
+    margin-bottom: 5%;
+  }
+
+  .delivery-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .country-select, .pincode-input {
+    height: 35px;
+    padding: 6px 8px;
+  }
+
+  .check-btn {
+    font-size: 12px;
+  }
+}

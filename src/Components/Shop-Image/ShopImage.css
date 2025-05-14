@@ -1,0 +1,47 @@
+.Shop-img-div {
+    position: relative; /* Enable absolute positioning inside */
+    margin-top: 5%;
+}
+
+.Shop-Img {
+    border-radius: 20px;
+    height: 400px;
+    width: 100%;
+    object-position: top;
+    object-fit: cover;
+}
+
+.Shop-Img-words {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%); /* Center the text block */
+    color: white;
+    text-align: start;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.Shop-Img-words h1 {
+    font-size: 4rem;
+    margin: 0.5rem 0;
+}
+
+.Shop-Img-words p {
+    font-size: 16px;
+}
+
+.Shop-Img-words button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(243, 106, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.Shop-Img-words button:hover {
+    background-color: rgb(238, 68, 68);
+}

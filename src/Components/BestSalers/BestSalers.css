@@ -1,0 +1,113 @@
+.see-more-btn{
+    background-color: white;
+    color: rgb(70, 70, 70);
+    font-size: 20px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: none !important;
+    border: 1px solid #dfdcdc;
+    transition: background-color 0.5s ease,transform 0.2s ease;
+}
+.see-more-btn:hover{
+  background-color: #ffe5c3;
+  color: rgb(58, 58, 58);
+  border: 1px solid transparent;
+  transform: translateY(-5px);
+}
+.best-salers-image{
+    height: 400px;
+    width: 400px;
+}
+.bestSalers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 80px;
+    padding: 40px 0px;
+  }
+  
+  .card {
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  .card .image {
+    background: rgb(246, 245, 250);
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center; /* center image vertically */
+    aspect-ratio: 1 / 1; /* force square shape */
+    overflow: hidden; /* hide overflow if image is larger */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0; /* match the square container exactly */
+  }
+  
+  .producttest{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .producttext h5,h6{
+    margin: unset;
+  }
+  .producttext h5{
+    font-family: 'DM Serif Display';
+    color: #bf9968;
+  }
+  /* .producttext{
+    display: flex;
+    justify-content: space-between;
+  } */
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .buy-now-btn{
+    background-color: rgb(191 153 104);
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    transition: background-color 0.5s ease-in,color 0.5s ease-in, transform 0.3s ease-in-out;
+  }
+  .buy-now-btn:hover{
+    background-color: rgb(228, 192, 146);
+    font-family: 'Montserrat';
+    font-weight: 500;
+    transform: translateY(-2px);;
+  }
+  .price{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+.Best-seller-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  @media (max-width: 480px) {
+    .see-more-btn{
+      padding: 5px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .Best-seller-head{
+      align-items: center;
+    }
+    .Best-seller-head h1{
+      font-size: 24px;
+    }
+    .bestSalers-grid {
+      padding: 20px 0px;
+      gap: 30px;
+    }
+}

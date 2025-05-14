@@ -1,0 +1,137 @@
+/* General Styling */
+.product-page-icon {
+  display: flex;
+  gap: 20px;
+}
+
+.product-page-icon i {
+  font-size: 25px;
+}
+
+.product-page-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: fit-content;
+}
+
+.goldDiamond {
+  height: 80px; /* Shows 2 items (2 x 40px) */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.goldDiamond-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  gap: 20px;
+  margin-left: 50px;
+}
+
+.goldDiamond-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+}
+
+/* Animation moves the entire list up */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-160px); /* 4 items x 40px height */
+  }
+}
+
+.product-price-list {
+  height: fit-content;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* horizontal, vertical, blur, color */
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.product-page-left {
+  margin-top: 8%;
+  margin-left: 5%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-page-price {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .product-price-list {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .product-page-left {
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+
+  .goldDiamond {
+    height: 60px; /* Shows 1.5 items (1 x 40px and part of the second) */
+  }
+
+  .goldDiamond-content {
+    height: 30px; /* Reduces height for better responsiveness */
+  }
+
+  .goldDiamond-track {
+    margin-left: 20px;
+  }
+
+  .product-page-icon {
+    gap: 10px;
+  }
+
+  .product-page-icon i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-page-price {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .product-price-list {
+    width: 100%;
+    padding: 8px 15px;
+  }
+
+  .product-page-left {
+    margin-left: 2%;
+    margin-top: 5%;
+  }
+
+  .goldDiamond {
+    height: 40px; /* Shows 1 item at a time */
+  }
+
+  .goldDiamond-content {
+    height: 30px; /* Adjust height for smaller screens */
+  }
+
+  .goldDiamond-track {
+    margin-left: 0;
+  }
+
+  .product-page-icon {
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .product-page-icon i {
+    font-size: 18px;
+  }
+}

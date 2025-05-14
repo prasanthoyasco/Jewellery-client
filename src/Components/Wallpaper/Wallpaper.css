@@ -1,0 +1,49 @@
+.wallpaper-video {
+    height: 95vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.play-pause-btn {
+    border-radius: 50%;
+    background-color: transparent;
+    border: unset;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+  }
+  .play-pause-btn:hover {
+    opacity: 1;
+  }
+  .carousel-control-next, .carousel-control-prev {
+    bottom: 100px;
+    align-items: flex-end;
+    width: 8%;
+  }
+.carousel-caption h1{
+    color: aliceblue !important;
+}
+.carousel-control-prev-icon {
+  display: none;
+}
+
+.carousel:hover .carousel-control-prev-icon {
+  display: inline-block;
+}
+
+  
+@media (max-width: 780px) {
+    .carousel-inner video{
+      height: 30vh;
+    }
+    .carousel-caption h1{
+      margin: unset !important;
+    }
+    .carousel-caption P{
+      margin: 0.5rem !important;
+    }
+}

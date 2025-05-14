@@ -1,0 +1,151 @@
+/* ====== Animations ====== */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ====== General Styling ====== */
+.product-media-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  margin-top: 10%;
+  margin-left: 8%;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  z-index: 1;
+  animation: fadeInSlideUp 0.8s ease forwards;
+}
+
+.product-media-item {
+  width: 370px;
+  height: 370px;
+  transition: transform 0.3s ease;
+  animation: zoomIn 0.6s ease-in-out forwards;
+}
+
+.product-media-item:hover {
+  transform: scale(1.03);
+}
+
+.product-page-image,
+.product-page-video {
+  width: 350px;
+  height: 350px;
+  border-radius: 8px;
+}
+
+/* ====== Mobile Carousel Styling ====== */
+.mobile-carousel .carousel-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mobile-carousel img,
+.mobile-carousel video {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.product-page-image-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 1024px) {
+  .product-media-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 5%;
+  }
+
+  .product-media-item {
+    width: 320px;
+    height: 320px;
+  }
+
+  .product-page-image,
+  .product-page-video {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-media-container {
+    grid-template-columns: 1fr;
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+
+  .product-media-item {
+    width: 280px;
+    height: 280px;
+  }
+
+  .product-page-image,
+  .product-page-video {
+    width: 280px;
+    height: 280px;
+  }
+
+  .mobile-carousel {
+    padding: 0;
+  }
+
+  .mobile-carousel img,
+  .mobile-carousel video {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-media-container {
+    grid-template-columns: 1fr;
+    margin-left: 2%;
+    margin-top: 3%;
+  }
+
+  .product-media-item {
+    width: 250px;
+    height: 250px;
+  }
+
+  .product-page-image,
+  .product-page-video {
+    width: 250px;
+    height: 250px;
+  }
+
+  .mobile-carousel img,
+  .mobile-carousel video {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
+}

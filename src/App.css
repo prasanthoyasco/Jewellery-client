@@ -1,0 +1,40 @@
+/* h1 p tag inital animation*/
+/* .fade-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-slide-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.rotate1 {
+  animation: slowRotate 20s linear infinite;
+  transform-origin: center;
+  display: inline-block;
+}
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
